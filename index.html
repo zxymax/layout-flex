@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.min.js"></script>
+  <style>
+  body {
+    background: #eee;
+  }
+
+  .wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  nav {
+    background: #333;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 10px;
+    /*background: #555;*/
+  }
+
+  nav a:hover {
+    background-color: #555;
+  }
+  /*grid css*/
+
+  #blocks {
+    margin: 20px;
+  }
+
+  article {
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  article h2 {
+    text-align: center;
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+
+  @media screen and (min-width: 768px) {
+    nav ul {
+      display: flex;
+      /*justify-content: center;*/
+      /*justify-content: flex-end;*/
+      /*justify-content: flex-start;*/
+      /*justify-content: space-around;*/
+      /*justify-content: space-between;*/
+    }
+    nav li {
+      /*flex: 1 1 0;*/
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+    }
+    ul.social {
+      margin: 0;
+    }
+    #blocks {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    article {
+      flex: 0 1 32%;
+      transition: flex-basis .2s linear;
+    }
+    article.stack{
+    	flex: 0 0 100%;
+    }
+  }
+
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav>
+      <ul>
+        <li><a href="">All stars</a></li>
+        <li><a href="">Hong10</a></li>
+        <li><a href="">Taisuke</a></li>
+        <li><a href="">Wing</a></li>
+      </ul>
+      <ul class="social">
+        <li><a href="" class="fb">Facebook</a></li>
+        <li><a href="" class="tw">Twitter</a></li>
+      </ul>
+    </nav>
+    <div style="margin:20px;">
+    	<span>Layout: </span>
+    	<a href="#" class="stack">Stack</a>
+    	<a href="#" class="grid">Grid</a>
+    </div>
+    <section id="blocks">
+      <article>
+        <h2>RED BULL BC ONE IS COMING BACK TO SWITZERLAND</h2>
+        <p>In 2004, the first Red Bull BC One went down at the cultural centre La Coupole in Biel. Fourteen years later, the world's most prestigious breaking battle goes back to Switzerland. This time, the Hallenstadion in northern Zurich will host the clash of the world's best breakers, on September 29, 2018.</p>
+      </article>
+      <article>
+        <h2>ROXRITE BECOMES THE FIRST B-BOY TO REACH 100 DOCUMENTED BATTLE WINS</h2>
+        <p>RoxRite, born Omar Delgado Macias, first encountered breaking while growing up in Windsor, CA, at the age of 12. The Mexican-born, California-raised dancer quickly took to breaking and eventually started competing. As he battled, he began to rack up wins.</p>
+      </article>
+      <article>
+        <h2>RED BULL BC ONE AUSTRIA CAMP 2018</h2>
+        <p>The Red Bull BC One Cypher Austria gets an upgrade to Austria's first Red Bull BC One Camp. In other words: More workshops, more battles, lectures and even more urban dancers who'll turn the prestigious Volkstheater Wien into a Hip Hop hub for three days. On the last evening, the main hall opens its doors for the Red Bull BC One Cypher, where the winner will get a chance to battle for a place at the World Final.</p>
+      </article>
+      <article>
+        <h2>2017 BC ONE AUSTRIA CYPHER: WOLFER VS JAEKWON | FINAL BATTLE</h2>
+        <p>In a final round with no shortage of style or power moves, two B-Boys from Austria, Jaekwon and The Wolfer, faced off in an an awesome final battle.</p>
+      </article>
+      <article>
+        <h2>THE FINAL FEEDBACK OF THE JUDGES OF THE 2017 BC ONE WORLD FINALS</h2>
+        <p>Before the 2017 Red Bull BC One World Finals kicked off we interviewed 4 of the 5 judges to get their comments on what they judge on. After Menno battled to victory, we were able to get feedback and comments from 3 of the 5 judges: Intact, AT and Niek. Check out what they had to say about any decisions that were hard to make, those who maybe didn't do as well as they thought they would, and the competitors who stood out for them:</p>
+      </article>
+      <article>
+      	<h2>RED BULL BC ONE BELGIUM CYPHER 20</h2>
+      	<p>More than 500 people were able to enjoy a very exciting cypher at the KVS in Brussels. A first time in this beautiful Theatre and in Brussels.
+With main acts from Soufian Bencok (Red Bull Streetstyle soccer winner) and Mr Funke (US rapper) from Lord of the Undergrounds the attendees we're surprised with a great show and an amazing atmosphere.</p>
+      </article>
+    </section>
+  </div>
+  <script>
+  $('a.stack').on('click', function(){
+  	$('article').addClass('stack')
+  });
+  $('a.grid').on('click', function(){
+  	$('article').removeClass('stack')
+  });
+  </script>
+</body>
+
+</html>
